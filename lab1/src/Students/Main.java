@@ -6,11 +6,6 @@ import java.util.Scanner;
 
 public class Main {
     private static void selection(Search StudentList) {
-<<<<<<< HEAD
-=======
-
->>>>>>> develop
-        
         Scanner in = new Scanner(System.in);
         System.out.println("Выберите пункт: 1)Найти средний балл студента. 2)Найти средний балл группы.");
         int p = in.nextInt();
@@ -27,6 +22,7 @@ public class Main {
                 break;
         }
     }
+    
     public static void main(String[] args) {
             Search List = new Search("StudentList");
             List.addStudentToStudentList(new Student("Булгак", "Виктория", 2, new int[]{7, 8, 8, 9, 7}));
