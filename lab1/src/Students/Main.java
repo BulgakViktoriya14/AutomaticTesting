@@ -22,6 +22,7 @@ public class Main {
                 break;
         }
     }
+    
     public static void main(String[] args) {
             Search List = new Search("StudentList");
             List.addStudentToStudentList(new Student("Булгак", "Виктория", 2, new int[]{7, 8, 8, 9, 7}));
