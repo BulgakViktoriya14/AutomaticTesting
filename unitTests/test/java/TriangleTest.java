@@ -4,73 +4,43 @@ import static org.junit.Assert.*;
 
 public class TriangleTest {
     @Test
-    //сумма двух сторон больше третьей
-    public void check1() {
-        Triangle triangle = new Triangle();
-        boolean actual = triangle.check(9,11,8);
-        assertEquals(actual, true);
+    public void sumOfTheTwoSidesIsGreaterThanTheThird() {
+        assertEquals(new Triangle().check(9,11,8), true);
     }
     @Test
-    //сумма двух сторон меньше третьей
-    public void check2() {
-        Triangle triangle = new Triangle();
-        boolean actual = triangle.check(22,5,3);
-        assertEquals(actual, false);
+    public void sumOfTheTwoSidesIsLessThanTheThird() {
+        assertEquals(new Triangle().check(22,5,3), false);
     }
     @Test
-    //равнобедренный треугольник(сумма двух сторон больше третьей)
-    public void check3() {
-        Triangle triangle = new Triangle();
-        boolean actual = triangle.check(8,8,10);
-        assertEquals(actual, true);
+    public void isoscelesTriangleWithSumOfTheTwoSidesIsGreaterThanTheThird() {
+         assertEquals(new Triangle().check(8,8,10), true);
     }
     @Test
-    //равнобедренный треугольник(сумма двух сторон меньше третьей)
-    public void check4() {
-        Triangle triangle = new Triangle();
-        boolean actual = triangle.check(8,8,20);
-        assertEquals(actual, false);
+    public void isoscelesTriangleWithSumOfTheTwoSidesIsLessThanTheThird() {
+        assertEquals(new Triangle().check(8,8,20), false);
     }
     @Test
-    //равносторонний треугольник(длины сторон положительные)
-    public void check5() {
-        Triangle triangle = new Triangle();
-        boolean actual = triangle.check(5,5,5);
-        assertEquals(actual, true);
+    public void equilateralTriangleWithPositiveSides() {
+        assertEquals(new Triangle().check(5,5,5), true);
     }
     @Test
-    //равносторонний треугольник(длины сторон отрицательные)
-    public void check6() {
-        Triangle triangle = new Triangle();
-        boolean actual = triangle.check(-5,-5,-5);
-        assertEquals(actual, false);
+    public void equilateralTriangleWithNegativeSides() {
+        assertEquals(new Triangle().check(-5,-5,-5), false);
     }
     @Test
-    //прямоугольный треугольник
-    public void check7() {
-        Triangle triangle = new Triangle();
-        boolean actual = triangle.check(5,4,3);
-        assertEquals(actual, true);
+    public void rightTriangle() {
+        assertEquals(new Triangle().check(5,4,3), true);
     }
     @Test
-    //сумма двух сторон равна третьей
-    public void check8() {
-        Triangle triangle = new Triangle();
-        boolean actual = triangle.check(10,4,6);
-        assertEquals(actual, false);
+    public void sumOfTheTwoSidesIsEqualToTheThird() {
+        assertEquals( new Triangle().check(10,4,6), false);
     }
     @Test
-    //длина одной из сторон равно 0
-    public void check9() {
-        Triangle triangle = new Triangle();
-        boolean actual = triangle.check(0,4,6);
-        assertEquals(actual, false);
+    public void lengthOfOneOfTheSidesIsZero() {
+        assertEquals(new Triangle().check(0,4,6), false);
     }
     @Test
-    //длина одной из сторон отрицательная
-    public void check10() {
-        Triangle triangle = new Triangle();
-        boolean actual = triangle.check(-6,4,6);
-        assertEquals(actual, false);
+    public void lengthOfOneOfTheSidesIsNegative() {
+        assertEquals(new Triangle().check(-6,4,6), false);
     }
 }
