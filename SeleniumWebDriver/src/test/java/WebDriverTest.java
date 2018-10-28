@@ -16,8 +16,6 @@ public class WebDriverTest {
         WebDriver driver = new ChromeDriver();
         WebDriverWait wait = new WebDriverWait(driver, 10);
         driver.get("https://www.britishairways.com/en-by/flights-and-holidays/flights");
-        WebElement buttonContinue = driver.findElement(By.name("Continue"));
-        buttonContinue.click();
         WebElement buttonFindFlights = driver.findElement(By.id("flightSearchButton"));
         buttonFindFlights.click();
         WebElement result = wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".errorList>li")));
