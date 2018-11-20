@@ -21,7 +21,6 @@ public class TestCheckInpPassenger {
     }
     @Test
     public void checkInMoreThanNinePassengers() {
-        mainPage.clickContinueButton();
         mainPage.setInputTo("Moscow, Russia, DME, Domodedovo");
         mainPage.clickCheckBoxOneWay();
         mainPage.setInputAdults();

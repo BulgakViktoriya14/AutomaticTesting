@@ -27,8 +27,6 @@ public class MainPage {
     private WebElement butSearch;
     @FindBy(css=".errorList>li")
     private WebElement error;
-    @FindBy(name = "Continue")
-    private WebElement butCon;
 
     public void setInputTo(String place) {
         inputTo.clear();
@@ -49,10 +47,6 @@ public class MainPage {
 
     public void clickSearchButton() {
         butSearch.click();
-    }
-
-    public void clickContinueButton() {
-        butCon.click();
     }
 
     public void clickCheckBoxOneWay() {
