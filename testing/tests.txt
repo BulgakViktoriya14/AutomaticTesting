@@ -27,7 +27,7 @@
 •	Выбираем пункт "OneWay".
 Результат: поле для выбора даты возврата становится неактивным.
 
-5)Аренда автомобиля. Приложение проверяет, что отметив галочкой "Возвращение в другое место", появляется поле для ввода названия места высадки.
+5)Аренда автомобиля. Приложение проверяет, что отметив галочкой "Returning to a different location", появляется поле для ввода названия места высадки.
 •	Заходим на сайт по ссылке https://www.britishairways.com/en-us/flights-and-holidays/flights
 •	В разделе "Create a trip" ставим галочку возле пункта "Cars".
 •	Ставим галочку около "Returning to a different location".
@@ -55,7 +55,7 @@
 открывается новая страница с сообщением: "Please read and accept the terms and conditions.
 Please ensure that you have entered all the necessary information. The following fields are not filled in: Please be sure to read and make sure that you understand the conditions of the reservation; To confirm consent, check the page."
 
-8)Бронирование отеля. Приложение проверяет, что при изменении даты заселения в отель/ выселения из отеля автоматически изменяется количество ночей.
+8)Бронирование отеля. Приложение проверяет, что при выборе даты заселения и выселения из отеля автоматически изменяется количество ночей.
 •	Заходим на сайт по ссылке https://www.britishairways.com/en-us/flights-and-holidays/flights
 •	В разделе "Create a trip" ставим галочку возле пункта "Hotels"
 •	Выбираем дату заселения(today)
