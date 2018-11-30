@@ -69,9 +69,13 @@ Please ensure that you have entered all the necessary information. The following
 •	Выбираем дату заселения(today)
 •	Выбираем дату выселения(today+1)
 •	Выбираем одного ребёнка и не указываем его возраст.
-•	Нажимаем на кнопку "Find flights"
+•	Нажимаем на кнопку "Find hotels"
 Результат: 
 открывается новая страница с сообщением об ошибке:"Please indicate the age of all children.".
 
-10)
+10)Бронирование отеля.Приложение проверяет,что количество младенцев не может превышать количество взрослых. 
 •	Заходим на сайт по ссылке https://www.britishairways.com/en-us/flights-and-holidays/flights
+•	В разделе "Create a trip" ставим галочку возле пункта "Hotels"
+•	Выбираем трёх взрослых.
+Результат:
+	При выборе младенцев нельзя выбрать больше трёх.
