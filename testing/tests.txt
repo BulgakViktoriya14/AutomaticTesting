@@ -42,17 +42,13 @@
 Результат: 
 открывается новая страница с сообщением об ошибке: "For safety reasons onboard, the number of infants travelling cannot exceed the number of adults.".
 
-7)Приложение проверяет, что 
+7)Приложение проверяет, что нельзя заказать билет, если данные о месте вылета и прилёта совпадают.
 •	Заходим на сайт по ссылке https://www.britishairways.com/en-us/flights-and-holidays/flights
-•	
-•	
-•	
-•	
-•	
-•	
-•	
+•	Заполняем поле "To"(New York, USA, NYC, New York (All Airports))
+•	Выбираем пункт "OneWay".
+•	Нажимаем на кнопку "Find flights"
 Результат: 
-
+открывается новая страница с сообщением об ошибке: "Your departure and destination points appear to be the same. Please check all your requirements are correct and try again.".
 
 8)Бронирование отеля. Приложение проверяет, что при выборе даты заселения и выселения из отеля автоматически изменяется количество ночей.
 •	Заходим на сайт по ссылке https://www.britishairways.com/en-us/flights-and-holidays/flights
