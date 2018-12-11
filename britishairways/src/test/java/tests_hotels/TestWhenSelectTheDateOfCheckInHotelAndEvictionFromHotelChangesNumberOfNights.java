@@ -16,7 +16,7 @@ public class TestWhenSelectTheDateOfCheckInHotelAndEvictionFromHotelChangesNumbe
     }
     @Test
     public void whenSelectTheDateOfCheckInHotelAndEvictionFromHotelChangesNumberOfNights() {
-        pageHotels.clickButCon();
+        pageHotels.clickButtonContinue();
         pageHotels.clickRadioButtonHotels();
         pageHotels.clickInputCheckIn();
         pageHotels.clickDateCheckIn();

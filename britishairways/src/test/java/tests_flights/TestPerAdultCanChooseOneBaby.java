@@ -16,7 +16,7 @@ public class TestPerAdultCanChooseOneBaby {
     }
     @Test
     public void checkInMoreThanNinePassengers() {
-        pageFlights.clickButCon();
+        pageFlights.clickButtonContinue();
         pageFlights.setInputTo("Moscow, Russia, DME, Domodedovo");
         pageFlights.clickRadioButtonOneWay();
         pageFlights.setInputAdults("1");

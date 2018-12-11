@@ -15,30 +15,42 @@ import java.util.List;
 public class PageHotels extends MainPage{
     @FindBy(id = "hotelRadioSelector")
     private WebElement radioButtonHotels;
+
     @FindBy(id = "planTripHotelDestination")
     private WebElement inputDestination;
+
     @FindBy(id = "hotelSearchButtonHS")
     private WebElement butSearchHotels;
+
     @FindBy(id = "checkInGO")
     private WebElement inputCheckIn;
+
     @FindBy(id = "checkOutGO")
     private WebElement inputCheckOut;
+
     @FindBy(id = "adultsRoom1H")
     private WebElement inputAdultsInRoom;
+
     @FindBy(id = "infantsRoom1H")
     private WebElement inputInfantsInRoom;
+
     @FindBy(id = "childrenRoom1H")
     private WebElement inputChildrenInRoom;
+
     @FindBy(id = "numNightsGO")
     private WebElement countNights;
+
     @FindBy(css = "#checkInGO_table>tbody")
     private WebElement tableCheckIn;
+
     @FindBy(css = "#checkOutGO_table>tbody")
     private WebElement tableCheckOut;
+
     @FindBy(css=".errorList>li")
     private WebElement error;
+
     @FindBy(name="Continue")
-    private WebElement butCon;
+    private WebElement buttonContinue;
 
     public void clickRadioButtonHotels() {
         new Actions(driver).moveToElement(radioButtonHotels).click().build().perform();
@@ -93,8 +105,8 @@ public class PageHotels extends MainPage{
     public void clickButtonSearchHotels() {
         butSearchHotels.click();
     }
-    public void clickButCon(){
-        butCon.click();
+    public void clickButtonContinue(){
+        buttonContinue.click();
     }
     public String getError() {
         return error.getText();

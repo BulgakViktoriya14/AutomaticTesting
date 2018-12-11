@@ -16,9 +16,9 @@ public class TestIfSelectOneWayThatFieldReturnDateIsNotActive {
     }
     @Test
     public void checkInMoreThanNinePassengers() {
-        pageFlights.clickButCon();
+        pageFlights.clickButtonContinue();
         pageFlights.clickRadioButtonOneWay();
-        Assert.assertEquals(pageFlights.inputReturnDateIsEnabled(), false);
+        Assert.assertFalse(pageFlights.inputReturnDateIsEnabled());
     }
     @AfterClass
     public static void closeDriver() {

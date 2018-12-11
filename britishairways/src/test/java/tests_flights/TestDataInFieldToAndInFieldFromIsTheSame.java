@@ -16,7 +16,7 @@ public class TestDataInFieldToAndInFieldFromIsTheSame {
     }
     @Test
     public void dataInFieldToAndInFieldFromIsTheSame() {
-        pageFlights.clickButCon();
+        pageFlights.clickButtonContinue();
         pageFlights.clearInputTo();
         pageFlights.setInputTo("New York, USA, NYC, New York (All Airports)");
         pageFlights.clickRadioButtonOneWay();

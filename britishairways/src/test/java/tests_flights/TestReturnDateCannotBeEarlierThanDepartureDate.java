@@ -16,11 +16,11 @@ public class TestReturnDateCannotBeEarlierThanDepartureDate {
     }
     @Test
     public void returnDateCannotBeEarlierThanDepartureDate() {
-        pageFlights.clickButCon();
+        pageFlights.clickButtonContinue();
         pageFlights.clickInputReturnDate();
         pageFlights.clickDateReturn();
         pageFlights.clickInputDepDate();
-        pageFlights.clickDateDep();
+        pageFlights.clickDateDep(2);
         Assert.assertEquals(pageFlights.getDateDep(),pageFlights.getDateReturn());
     }
     @AfterClass

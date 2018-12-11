@@ -15,11 +15,11 @@ public class TestIfSelectReturnToDifferentLocationFieldNamePlaceAppear {
         Driver.getDriver().get("https://www.britishairways.com/en-us/flights-and-holidays/flights");
     }
     @Test
-    public void checkInMoreThanNinePassengers() {
-        pageCars.clickButCon();
+    public void checkIfSelectReturnToDifferentLocationFieldNamePlaceAppear() {
+        pageCars.clickButtonContinue();
         pageCars.clickRadioButtonCars();
         pageCars.clickCheckBoxReturning();
-        Assert.assertEquals(pageCars.divForNameLocationIsDisabled(),true);
+        Assert.assertTrue(pageCars.divForNameLocationIsDisabled());
     }
     @AfterClass
     public static void closeDriver() {

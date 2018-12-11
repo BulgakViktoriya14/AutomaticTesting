@@ -15,8 +15,8 @@ public class TestBabiesNoMoreThanAdults {
         Driver.getDriver().get("https://www.britishairways.com/en-us/flights-and-holidays/flights");
     }
     @Test
-    public void checkInMoreThanNinePassengers() {
-        pageHotels.clickButCon();
+    public void checkBabiesNoMoreThanAdults() {
+        pageHotels.clickButtonContinue();
         pageHotels.clickRadioButtonHotels();
         pageHotels.setInputAdultsInRoom("3");
         Assert.assertEquals(pageHotels.foundCountInputInfantsInRoom(),4);

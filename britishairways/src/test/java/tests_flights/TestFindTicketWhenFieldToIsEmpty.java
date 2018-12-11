@@ -16,12 +16,11 @@ public class TestFindTicketWhenFieldToIsEmpty {
     }
     @Test
     public void findTicketWhenFieldToIsEmpty() {
-        pageFlights.clickButCon();
+        pageFlights.clickButtonContinue();
         pageFlights.clearInputTo();
         pageFlights.clickRadioButtonOneWay();
         pageFlights.clickButtonSearch();
-        String expectedError = "Please add the destination you're travelling 'To'.";
-        Assert.assertEquals(pageFlights.getError(), expectedError);
+        Assert.assertEquals(pageFlights.getError(), "Please add the destination you're travelling 'To'.");
     }
     @AfterClass
     public static void closeDriver() {

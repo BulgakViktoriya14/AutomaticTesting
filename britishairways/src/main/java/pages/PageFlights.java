@@ -15,30 +15,42 @@ import java.util.List;
 public class PageFlights extends MainPage {
     @FindBy(css = ".autoWrapper>input")
     private WebElement inputTo;
+
     @FindBy(id = "journeyTypeOWflights")
     private WebElement radioButtonOneWay;
+
     @FindBy(css = ".styledSelect>#ad")
     private WebElement inputAdults;
+
     @FindBy(css = ".styledSelect>#ya")
     private WebElement inputTeens;
+
     @FindBy(css = ".styledSelect>#ch")
     private WebElement inputChildren;
+
     @FindBy(css = ".styledSelect>#inf")
     private WebElement inputInfants;
+
     @FindBy(css = "#flightSearchButton")
     private WebElement butSearch;
+
     @FindBy(id = "retDate")
     private WebElement inputReturnDate;
+
     @FindBy(id = "depDate")
     private WebElement inputDepDate;
+
     @FindBy(css = "#depDate_table>tbody")
     private WebElement tableDep;
+
     @FindBy(css = "#retDate_table>tbody")
     private WebElement tableRet;
+
     @FindBy(css=".errorList>li")
     private WebElement error;
+
     @FindBy(name="Continue")
-    private WebElement butCon;
+    private WebElement buttonContinue;
 
     public  void clearInputTo(){
         inputTo.clear();
@@ -80,10 +92,10 @@ public class PageFlights extends MainPage {
             }
         }
     }
-    public void clickDateDep(){
+    public void clickDateDep(int count){
         DateFormat dateFormat = new SimpleDateFormat("MM/dd/yy");
         Calendar calendar = Calendar.getInstance();
-        calendar.add(Calendar.DAY_OF_YEAR, 2);
+        calendar.add(Calendar.DAY_OF_YEAR, count);
         Date afterTomorrow = calendar.getTime();
         List<WebElement> arrayDep=tableDep.findElements(By.cssSelector("td>div"));
         for(WebElement cell : arrayDep) {
@@ -105,8 +117,8 @@ public class PageFlights extends MainPage {
     public void clickButtonSearch() {
         butSearch.click();
     }
-    public void clickButCon(){
-        butCon.click();
+    public void clickButtonContinue(){
+        buttonContinue.click();
     }
     public String getError() {
         return error.getText();

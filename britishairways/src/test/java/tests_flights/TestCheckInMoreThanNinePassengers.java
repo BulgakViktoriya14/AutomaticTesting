@@ -16,7 +16,7 @@ public class TestCheckInMoreThanNinePassengers {
     }
     @Test
     public void checkInMoreThanNinePassengers() {
-        pageFlights.clickButCon();
+        pageFlights.clickButtonContinue();
         pageFlights.clearInputTo();
         pageFlights.setInputTo("Moscow, Russia, DME, Domodedovo");
         pageFlights.clickRadioButtonOneWay();
@@ -24,8 +24,7 @@ public class TestCheckInMoreThanNinePassengers {
         pageFlights.setInputTeens("4");
         pageFlights.setInputChildren("3");
         pageFlights.clickButtonSearch();
-        String expectedError = "The total number of adults, young adults and children must not exceed 9. If you are booking a group of 20 people or less, you can make separate bookings on ba.com up to your total number. Find out about making a booking for more than 9 people.";
-        Assert.assertEquals(pageFlights.getError(), expectedError);
+        Assert.assertEquals(pageFlights.getError(), "The total number of adults, young adults and children must not exceed 9. If you are booking a group of 20 people or less, you can make separate bookings on ba.com up to your total number. Find out about making a booking for more than 9 people.");
     }
     @AfterClass
     public static void closeDriver() {

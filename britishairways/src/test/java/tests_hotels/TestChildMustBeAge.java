@@ -16,7 +16,7 @@ public class TestChildMustBeAge {
     }
     @Test
     public void childMustBeAge() {
-        pageHotels.clickButCon();
+        pageHotels.clickButtonContinue();
         pageHotels.clickRadioButtonHotels();
         pageHotels.setInputDestination("Moscow, Russia, DME, Domodedovo");
         pageHotels.setInputChildrenInRoom("1");
