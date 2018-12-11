@@ -23,8 +23,6 @@ public class TestCheckInMoreThanNinePassengers {
         pageFlights.setInputAdults("5");
         pageFlights.setInputTeens("4");
         pageFlights.setInputChildren("3");
-        //pageFlights.clickButtonSearch();
-        //Assert.assertEquals(pageFlights.getError(), "The total number of adults, young adults and children must not exceed 9. If you are booking a group of 20 people or less, you can make separate bookings on ba.com up to your total number. Find out about making a booking for more than 9 people.");
     }
     @AfterClass
     public static void closeDriver() {
