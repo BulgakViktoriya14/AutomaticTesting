@@ -1,36 +1,30 @@
 package tests_flights;
 
+import driver.Driver;
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import pages.MainPage;
+import pages.PageFlights;
 
 public class TestFindTicketWhenFieldToIsEmpty {
-    private static WebDriver driver;
-    private static MainPage mainPage;
+    private PageFlights pageFlights = new PageFlights();
 
     @BeforeClass
-    public static void setup() {
-        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
-        driver = new ChromeDriver();
-        mainPage = new MainPage(driver);
-        driver.manage().window().maximize();
-        driver.get("https://www.britishairways.com/en-us/flights-and-holidays/flights");
+    public static void openDriver() {
+        Driver.getDriver().get("https://www.britishairways.com/en-us/flights-and-holidays/flights");
     }
     @Test
     public void findTicketWhenFieldToIsEmpty() {
-        mainPage.clickButCon();
-        mainPage.clearInputTo();
-        mainPage.clickRadioButtonOneWay();
-        mainPage.clickButtonSearch();
+        pageFlights.clickButCon();
+        pageFlights.clearInputTo();
+        pageFlights.clickRadioButtonOneWay();
+        pageFlights.clickButtonSearch();
         String expectedError = "Please add the destination you're travelling 'To'.";
-        Assert.assertEquals(mainPage.getError(), expectedError);
+        Assert.assertEquals(pageFlights.getError(), expectedError);
     }
     @AfterClass
-    public static void tearDown() {
-        driver.quit();
+    public static void closeDriver() {
+        Driver.closeDriver();
     }
 }

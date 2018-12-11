@@ -1,34 +1,28 @@
 package tests_cars;
 
+import driver.Driver;
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import pages.MainPage;
+import pages.PageCars;
 
 public class TestIfSelectReturnToDifferentLocationFieldNamePlaceAppear {
-    private static WebDriver driver;
-    private static MainPage mainPage;
+    private PageCars pageCars = new PageCars();
 
     @BeforeClass
-    public static void setup() {
-        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
-        driver = new ChromeDriver();
-        mainPage = new MainPage(driver);
-        driver.manage().window().maximize();
-        driver.get("https://www.britishairways.com/en-us/flights-and-holidays/flights");
+    public static void openDriver() {
+        Driver.getDriver().get("https://www.britishairways.com/en-us/flights-and-holidays/flights");
     }
     @Test
     public void checkInMoreThanNinePassengers() {
-        mainPage.clickButCon();
-        mainPage.clickRadioButtonCars();
-        mainPage.clickCheckBoxReturning();
-        Assert.assertEquals(mainPage.divForNameLocationIsDisabled(),true);
+        pageCars.clickButCon();
+        pageCars.clickRadioButtonCars();
+        pageCars.clickCheckBoxReturning();
+        Assert.assertEquals(pageCars.divForNameLocationIsDisabled(),true);
     }
     @AfterClass
-    public static void tearDown() {
-        driver.quit();
+    public static void closeDriver() {
+        Driver.closeDriver();
     }
 }
