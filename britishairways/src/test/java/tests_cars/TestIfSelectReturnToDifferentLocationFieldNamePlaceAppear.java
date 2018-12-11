@@ -19,7 +19,7 @@ public class TestIfSelectReturnToDifferentLocationFieldNamePlaceAppear {
         pageCars.clickButtonContinue();
         pageCars.clickRadioButtonCars();
         pageCars.clickCheckBoxReturning();
-        Assert.assertTrue(pageCars.divForNameLocationIsDisabled());
+        Assert.assertEquals(pageCars.divForNameLocationIsDisabled(),true);
     }
     @AfterClass
     public static void closeDriver() {
