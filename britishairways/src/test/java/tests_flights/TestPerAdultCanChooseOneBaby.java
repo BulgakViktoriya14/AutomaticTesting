@@ -15,14 +15,12 @@ public class TestPerAdultCanChooseOneBaby {
         Driver.getDriver().get("https://www.britishairways.com/en-us/flights-and-holidays/flights");
     }
     @Test
-    public void checkInMoreThanNinePassengers() {
+    public void checkPerAdultCanChooseOneBaby() {
         pageFlights.clickButtonContinue();
         pageFlights.setInputTo("Moscow, Russia, DME, Domodedovo");
         pageFlights.clickRadioButtonOneWay();
         pageFlights.setInputAdults("1");
         pageFlights.setInputInfants("2");
-        pageFlights.clickButtonSearch();
-        Assert.assertEquals(pageFlights.getError(),"For safety reasons onboard, the number of infants travelling cannot exceed the number of adults.");
     }
     @AfterClass
     public static void closeDriver() {

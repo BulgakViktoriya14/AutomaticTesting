@@ -24,8 +24,6 @@ public class TestChildMustBeAge {
         pageHotels.clickDateCheckIn();
         pageHotels.clickInputCheckOut();
         pageHotels.clickDateCheckOut(1);
-        pageHotels.clickButtonSearchHotels();
-        Assert.assertEquals(pageHotels.getError(),"Please enter all child ages");
     }
     @AfterClass
     public static void closeDriver() {
