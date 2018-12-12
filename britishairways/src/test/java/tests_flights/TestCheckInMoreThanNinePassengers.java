@@ -19,7 +19,6 @@ public class TestCheckInMoreThanNinePassengers {
         pageFlights.clickButtonContinue();
         pageFlights.clearInputTo();
         pageFlights.setInputTo("Moscow, Russia, DME, Domodedovo");
-        pageFlights.clickRadioButtonOneWay();
         pageFlights.setInputAdults("5");
         pageFlights.setInputTeens("4");
         pageFlights.setInputChildren("3");
